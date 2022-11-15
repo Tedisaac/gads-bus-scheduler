@@ -7,15 +7,12 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.busschedule.database.schedule.Schedule
 import com.example.busschedule.databinding.BusStopItemBinding
-import com.example.busschedule.viewmodels.BusScheduleViewModel
 import java.sql.Date
 import java.text.SimpleDateFormat
 
 
 
 class BusStopAdapter(private val onItemClicked: (Schedule) -> Unit) : androidx.recyclerview.widget.ListAdapter<Schedule, BusStopAdapter.BusStopViewHolder>(DiffCallback) {
-
-
 
     class BusStopViewHolder(private var binding: BusStopItemBinding) : RecyclerView.ViewHolder(binding.root) {
         @SuppressLint("SimpleDateFormat")
